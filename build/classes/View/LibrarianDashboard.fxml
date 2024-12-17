@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LibrarianDashboardController">
+    <stylesheets>
+        <URL value="@Style/librariandashboard.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="187.0" layoutY="37.0" prefHeight="228.0" prefWidth="208.0"  style="-fx-background-color: #437203;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <BorderPane layoutX="524.0" layoutY="360.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="81.0" prefWidth="1284.0" style="-fx-background-color: white; -fx-border-color: #437203; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fx:id="userProfileImageview" fitHeight="60.0" fitWidth="69.0" onMouseClicked="#ShowUserProfile" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/userIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="userFullname" prefWidth="150.0" text="User Name" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="66.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../pics/logout.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <left>
+                  <VBox prefHeight="200.0" prefWidth="200.0" spacing="2.0" style="-fx-background-color: white; -fx-border-color: #437203; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="sidebarHome" alignment="CENTER" onMouseClicked="#ShowSidebarHome" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #437203;" text="Home" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="sidebarUserMangement" alignment="CENTER" onMouseClicked="#ShowSidebarUserManagement" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #437203;" text="User Management" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="sidebarBookManagement" alignment="CENTER" onMouseClicked="#ShowSidebarBookManagement" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #437203;" text="Book Management" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+                  </VBox>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="HomeAnchorPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="296.0" text="Welcome Librarian" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bookshelf Symbol 7" size="61.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="UserMangAnchorPane" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="296.0" text="UserManagement" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bookshelf Symbol 7" size="61.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="BookMangAnchorPane" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="296.0" text="BookManagement" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bookshelf Symbol 7" size="61.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

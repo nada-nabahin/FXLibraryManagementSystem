@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.Selected{
+    -fx-border-width: 4;
+    -fx-border-color: #00a9a9;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;  
+}
+
+.sidebar-label{
+    -fx-text-fill: white; 
+}
+ 

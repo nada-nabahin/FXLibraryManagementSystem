@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminDashboardController">
+    <stylesheets>
+        <URL value="@/Style/admindashboard.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="187.0" layoutY="37.0" prefHeight="228.0" prefWidth="208.0" style="-fx-background-color: #005878;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <BorderPane layoutX="524.0" layoutY="360.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="81.0" prefWidth="1284.0" style="-fx-background-color: white; -fx-border-color: #005878; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fx:id="userProfileImageview" fitHeight="60.0" fitWidth="69.0" onMouseClicked="#ShowUserProfile" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/userIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="userFullname" prefWidth="150.0" text="Full Name" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="74.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../pics/logout.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <left>
+                  <VBox prefHeight="200.0" prefWidth="200.0" spacing="2.0" style="-fx-background-color: white; -fx-border-color: #005878; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="sidebarHome" alignment="CENTER" onMouseClicked="#ShowSidebarHome" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #005878;" text="Home" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="sidebarUserMangement" alignment="CENTER" onMouseClicked="#ShowSidebarUserManagement" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #005878;" text="User Management" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="sidebarBookManagement" alignment="CENTER" onMouseClicked="#ShowSidebarBookManagement" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #005878;" text="Book Management" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+                  </VBox>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="HomeAnchorPane" prefHeight="700.0" prefWidth="1700.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="296.0" text="Welcome Admin" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bookshelf Symbol 7" size="61.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="UserMangAnchorPane" layoutX="11.0" layoutY="12.0" prefHeight="900.0" prefWidth="1800.0" visible="false" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="8.0">
+                           <children>
+                              <AnchorPane layoutY="1.0" prefHeight="659.0" prefWidth="472.0" style="-fx-background-color: #005878;">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="105.0" layoutY="15.0" prefHeight="617.0" prefWidth="494.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="-77.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-41.0" AnchorPane.topAnchor="8.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="User Data" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="UserProfileImage" fitHeight="118.0" fitWidth="130.0" onMouseClicked="#UploadUserProfileImage" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/userIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label text="User Profile Image" textFill="WHITE" />
+                                                <Label fx:id="profilePictureLabelError" alignment="CENTER" prefHeight="21.0" prefWidth="321.0" textFill="#ff4f4f">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Full Name :" textFill="WHITE" />
+                                                      <TextField fx:id="fullNameTf" prefHeight="45.0" promptText="Enter fullname" />
+                                                      <Label fx:id="fullNameLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Role :" textFill="WHITE" />
+                                                      <ComboBox fx:id="roleComboBox" prefHeight="45.0" prefWidth="300.0" promptText="Select Role" />
+                                                      <Label fx:id="roleLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="User Name :" textFill="WHITE" />
+                                                      <TextField fx:id="userNameTf" prefHeight="45.0" promptText="Enter username" />
+                                                      <Label fx:id="userNameLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Password :" textFill="WHITE" />
+                                                      <PasswordField fx:id="passwordTf" prefHeight="45.0" promptText="Enter password" />
+                                                      <Label fx:id="passwordLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="E-mail :" textFill="WHITE" />
+                                                      <TextField fx:id="emailTf" prefHeight="45.0" promptText="Enter email" />
+                                                      <Label fx:id="emailLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Phone :" textFill="WHITE" />
+                                                      <TextField fx:id="phoneTf" prefHeight="45.0" promptText="Enter phone number" />
+                                                      <Label fx:id="phoneLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                             <children>
+                                                <VBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="150.0" spacing="15.0">
+                                                   <children>
+                                                      <Button fx:id="addBtn" mnemonicParsing="false" onAction="#AddUser" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #005878; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white;" text="Add" textFill="WHITE" />
+                                                      <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #901010; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white; -fx-background-radius: 10;" text="Delete" textFill="WHITE" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="150.0" spacing="15.0">
+                                                   <children>
+                                                      <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#UpdateUser" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #437203; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white; -fx-background-radius: 10;" text="Update" textFill="WHITE" />
+                                                      <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#Cancel" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #5184b8; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white; -fx-background-radius: 10;" text="Cancel" textFill="WHITE" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets bottom="15.0" left="25.0" right="25.0" top="15.0" />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <VBox layoutX="778.0" layoutY="202.0" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="525.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="990.0" style="-fx-border-color: #005878; -fx-background-color: white;">
+                                       <children>
+                                          <Label prefHeight="45.0" prefWidth="200.0" text="User Role Filters " textFill="#005878">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="userRoleFilter" onMouseClicked="#FilterTableData" prefHeight="45.0" prefWidth="200.0" promptText="Select Role" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </HBox>
+                                    <TableView fx:id="tableViewUser" onMouseClicked="#SetSelectedUserToForm" prefHeight="617.0" prefWidth="990.0">
+                                      <columns>
+                                        <TableColumn fx:id="fullNameColumn" minWidth="141.0" prefWidth="75.0" text="FullName" />
+                                        <TableColumn fx:id="roleColumn" minWidth="109.0" prefWidth="109.0" text="Role" />
+                                          <TableColumn fx:id="userNameColumn" minWidth="134.0" prefWidth="134.0" text="UserName" />
+                                          <TableColumn fx:id="passwordColumn" minWidth="141.0" prefWidth="144.0" text="Password" />
+                                          <TableColumn fx:id="emailColumn" minWidth="141.0" prefWidth="177.0" text="E-mail" />
+                                          <TableColumn fx:id="phoneColumn" minWidth="141.0" prefWidth="75.0" text="Phone" />
+                                          <TableColumn fx:id="imageviewColumn" minWidth="124.0" prefWidth="142.0" text="UserImage" />
+                                      </columns>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="BookMangAnchorPane" prefHeight="900.0" prefWidth="1800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane style="-fx-background-color: #005878;">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="105.0" layoutY="15.0" prefHeight="728.0" prefWidth="494.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="-128.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-50.0" AnchorPane.topAnchor="8.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Book Data" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 4;">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="230.0" spacing="5.0">
+                                                   <children>
+                                                      <ImageView fx:id="formBookmage" fitHeight="116.0" fitWidth="128.0" onMouseClicked="#UploadformBookImage" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/booksss.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label text="User Profile Image" textFill="WHITE" />
+                                                      <Label fx:id="formBookPicLabelError1" alignment="CENTER" prefHeight="21.0" prefWidth="321.0" textFill="#ff4f4f">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="230.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Category :" textFill="WHITE" />
+                                                      <ComboBox fx:id="formCategoryComboBox" prefHeight="45.0" prefWidth="300.0" promptText="Select Category" />
+                                                      <Label fx:id="categoryLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                      <Label prefWidth="300.0" text="Language:" textFill="WHITE" />
+                                                      <ComboBox fx:id="formLangComboBox" prefHeight="45.0" prefWidth="300.0" promptText="Select Language" />
+                                                      <Label fx:id="languageLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="15.0" top="25.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Title :" textFill="WHITE" />
+                                                      <TextField fx:id="titleTf" prefHeight="40.0" promptText="Enter title" />
+                                                      <Label fx:id="titleLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Author :" textFill="WHITE" />
+                                                      <TextField fx:id="authorTf" prefHeight="40.0" promptText="Enter author name" />
+                                                      <Label fx:id="authorLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Isbn :" textFill="WHITE" />
+                                                      <TextField fx:id="isbnTf" prefHeight="40.0" promptText="Enter isbn" />
+                                                      <Label fx:id="isbnLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Publish Date :" textFill="WHITE" />
+                                                      <TextField fx:id="publishDateTf" prefHeight="40.0" />
+                                                      <Label fx:id="publishDateLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Page Count :" textFill="WHITE" />
+                                                      <TextField fx:id="pageCountTf" prefHeight="40.0" promptText="Enter page count" />
+                                                      <Label fx:id="pageCountLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label prefWidth="300.0" text="Copy Count :" textFill="WHITE" />
+                                                      <TextField fx:id="copyCountTf" prefHeight="40.0" promptText="Enter copy count" />
+                                                      <Label fx:id="copyCountLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label prefWidth="300.0" text="Publisher :" textFill="WHITE" />
+                                                <TextField fx:id="publisherTf" prefHeight="40.0" promptText="Enter publisher" />
+                                                <Label fx:id="publisherLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="150.0" spacing="15.0">
+                                                         <children>
+                                                            <Button fx:id="addBtn1" mnemonicParsing="false" onAction="#AddBook" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #005878; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white;" text="Add" textFill="WHITE" />
+                                                            <Button fx:id="deleteBtn1" mnemonicParsing="false" onAction="#DeleteBook" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #901010; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white; -fx-background-radius: 10;" text="Delete" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="150.0" spacing="15.0">
+                                                         <children>
+                                                            <Button fx:id="updateBtn1" mnemonicParsing="false" onAction="#UpdateBook" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #437203; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white; -fx-background-radius: 10;" text="Update" textFill="WHITE" />
+                                                            <Button fx:id="cancelBtn1" mnemonicParsing="false" onAction="#CancelBook" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #5184b8; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white; -fx-background-radius: 10;" text="Cancel" textFill="WHITE" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets bottom="15.0" left="25.0" right="25.0" top="15.0" />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <VBox layoutX="696.0" layoutY="84.0" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="990.0" spacing="20.0" style="-fx-border-color: #005878; -fx-background-color: white;">
+                                       <children>
+                                          <Label prefHeight="45.0" prefWidth="238.0" text="Book Category Filters " textFill="#005878">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="BookFilter" onMouseClicked="#SetBookCategoryFilter" prefHeight="45.0" prefWidth="200.0" promptText="Select Category" />
+                                          <ImageView fitHeight="58.0" fitWidth="53.0" onMouseClicked="#ShowAddCategoryStage" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/booksss.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <TableView fx:id="tableViewBook" onMouseClicked="#SetSelectedBookToForm" prefHeight="630.0" prefWidth="990.0">
+                                       <columns>
+                                          <TableColumn fx:id="titleColumn" minWidth="141.0" prefWidth="75.0" text="Title" />
+                                          <TableColumn fx:id="authorColumn" minWidth="141.0" prefWidth="75.0" text="Author" />
+                                          <TableColumn fx:id="categoryColumn" minWidth="141.0" prefWidth="75.0" text="Category" />
+                                          <TableColumn fx:id="isbnColumn" minWidth="88.0" prefWidth="88.0" text="Isbn" />
+                                          <TableColumn fx:id="copyCountColumn" minWidth="134.0" prefWidth="134.0" text="CopyCount" />
+                                          <TableColumn fx:id="pageCountColumn" minWidth="133.0" prefWidth="133.0" text="PageCount" />
+                                          <TableColumn fx:id="languageColumn" minWidth="97.0" prefWidth="97.0" text="Language" />
+                                          <TableColumn fx:id="bookImageviewColumn" minWidth="141.0" prefWidth="75.0" text="BookImage" />
+                                       </columns>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserProfileController">
+    
+   <children>
+      <AnchorPane layoutX="59.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0" fx:id="AnchorPaneColor" style="-fx-background-color: #005878;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="105.0" layoutY="56.0" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+               <children>
+                  <Label alignment="CENTER" text="User Profile" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="UserProfileImage" fitHeight="118.0" fitWidth="130.0" onMouseClicked="#UploadUserProfileImage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/userIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="User Profile Image" textFill="WHITE" />
+                        <Label fx:id="profilePictureLabelError" alignment="CENTER" prefHeight="21.0" prefWidth="321.0" textFill="#ff4f4f">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="350.0">
+                           <children>
+                              <Label prefWidth="300.0" text="Full Name :" textFill="WHITE" />
+                              <TextField fx:id="fullNameTf" prefHeight="45.0" promptText="Enter fullname" />
+                              <Label fx:id="fullNameLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="350.0">
+                           <children>
+                              <Label prefWidth="300.0" text="Role :" textFill="WHITE" />
+                              <ComboBox fx:id="roleComboBox" disable="true" prefHeight="45.0" prefWidth="300.0" promptText="Select Role" />
+                              <Label fx:id="roleLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                           </children></VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="350.0">
+                           <children>
+                              <Label prefWidth="300.0" text="User Name :" textFill="WHITE" />
+                              <TextField fx:id="userNameTf" prefHeight="45.0" promptText="Enter username" />
+                              <Label fx:id="userNameLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="350.0">
+                           <children>
+                              <Label prefWidth="300.0" text="Password :" textFill="WHITE" />
+                              <PasswordField fx:id="passwordTf" prefHeight="45.0" promptText="Enter password" />
+                              <Label fx:id="passwordLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="350.0">
+                           <children>
+                              <Label prefWidth="300.0" text="E-mail :" textFill="WHITE" />
+                              <TextField fx:id="emailTf" prefHeight="45.0" promptText="Enter email" />
+                              <Label fx:id="emailLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="350.0">
+                           <children>
+                              <Label prefWidth="300.0" text="Phone :" textFill="WHITE" />
+                              <TextField fx:id="phoneTf" prefHeight="45.0" promptText="Enter phone number" />
+                              <Label fx:id="phoneLabelError" prefWidth="300.0" textFill="#ff4f4f" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="150.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#Update" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #437203; -fx-border-width: 4; -fx-border-radius: 8; -fx-border-color: white;" text="Update" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="150.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#ShowDashboard" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #901010; -fx-border-radius: 8; -fx-background-radius: 10;" text="Cancel" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="15.0" left="25.0" right="25.0" top="15.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
