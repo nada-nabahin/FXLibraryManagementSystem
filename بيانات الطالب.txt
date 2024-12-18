@@ -1,6 +1,6 @@
 Name : Nada Ali Al-nabahin
 No : 220202025
-Link :
+Link :https://youtu.be/vjIamcZLHBA
 قمت بعرض جميع الواجهات في اول الفيديو من خلال scene builder 
 عند تشغيل البرنامج بعض الواجهات لا يظهر حجمها كما قمت بتصميمها 
 في اكسبشنز احيانا في تحميل ال fxml files حتى مع الربط الصحيح 
